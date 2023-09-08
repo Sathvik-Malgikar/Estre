@@ -15,7 +15,7 @@ public class PlaceSeat : MonoBehaviour
     private List<ARRaycastHit> hits = new List<ARRaycastHit>();
     private ARRaycastManager ARM = null;
     private ARPlaneManager ARP = null;
-    public GameObject gotemp = null;
+    public static GameObject gotemp = null;
     public Material ghostref;
 
     public Rect spawnArea;
@@ -172,7 +172,7 @@ public class PlaceSeat : MonoBehaviour
 
 
     }
-    public void deleteInstance(){
+    public static void deleteInstance(){
          if (gotemp != null)
                 {
                     Destroy(gotemp);

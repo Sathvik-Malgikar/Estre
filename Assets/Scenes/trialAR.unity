@@ -3321,6 +3321,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f3d71a344f08604ebb42d9cf94ccee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstructionTree: {fileID: 9197481963319205126, guid: a6d41fa13c3f51344acdf5f9ce7f3916, type: 3}
+  placementTree: {fileID: 9197481963319205126, guid: 966d87310e44e9549a0ddaf811992dd9, type: 3}
+  uid: {fileID: 1552054535}
 --- !u!114 &1552054535
 MonoBehaviour:
   m_ObjectHideFlags: 0
