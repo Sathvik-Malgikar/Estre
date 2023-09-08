@@ -7,19 +7,23 @@
     justify-content: center;
 }
 
-#RadioButtonGroup > VisualElement > * > RadioButton > VisualElement > Label {
-    margin-left: 14px;
+#RadioButtonGroup > VisualElement > * > RadioButton > VisualElement > VisualElement {
+    margin-left: 77px;
     align-self: auto;
     justify-content: flex-start;
     align-items: auto;
     flex-direction: row;
+    color: rgb(255, 255, 255);
+    display: none;
 }
 
-#RadioButtonGroup > VisualElement > * > RadioButton > VisualElement > Label:hover {
-    margin-left: 14px;
-    align-self: auto;
-    justify-content: flex-start;
-    align-items: auto;
-    flex-direction: row;
+RadioButton:checked Label {
     color: rgb(187, 195, 80);
+    font-weight: bold;
+    margin-left : 30px;
+}
+RadioButton Label {
+    color: rgb(255, 255, 255);
+    font-weight: normal ;
+    margin-left : 30px;
 }

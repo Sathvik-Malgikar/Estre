@@ -60,7 +60,7 @@ public class PlaceSeat : MonoBehaviour
     void OnEnable()
     {
 
-        Debug.Log("ENABLED");
+        Debug.Log("TOUCH ENABLED FROM PHASE 2");
 
         et.TouchSimulation.Enable();
         et.EnhancedTouchSupport.Enable();
@@ -73,7 +73,7 @@ public class PlaceSeat : MonoBehaviour
     void OnDisable()
     {
 
-        Debug.Log("DISABLED");
+        Debug.Log("TOUCH DISABLED FROM PHASE 2");
         et.TouchSimulation.Disable();
         et.EnhancedTouchSupport.Disable();
         et.Touch.onFingerDown -= fingHandler;
@@ -89,7 +89,7 @@ public class PlaceSeat : MonoBehaviour
         if (fing.index != 0)
         {
             // Debug LogError()
-            Debug.Log("skipped :" + fing.index);
+            Debug.Log("skipped finger due to multiple touch :" + fing.index);
             return;
         }
 
