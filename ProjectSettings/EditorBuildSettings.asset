@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: c850ee8c3b14cc8459e7e186857cf567
+  - enabled: 1
+    path: Assets/Scenes/UIWelcome.unity
+    guid: 9dd8f2c2b26283f4181ad033dcf0c524
+  - enabled: 0
+    path: Assets/Scenes/paramPage.unity
+    guid: 960aef3723c70fb4cb506a9b00adcdde
+  - enabled: 1
+    path: Assets/Scenes/trialAR.unity
+    guid: 677997569dbc0b549b53249579eaaab1
+  - enabled: 0
+    path: Assets/Scenes/fineTuning.unity
+    guid: 1aa7dc82be2ca684dbdd9b6242d46b33
+  m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 45c3891b2d8b88d489f198ff00f91b51, type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: be3735eb6f00aeb45a4ff1d976bac193, type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 991c07b4209a7ed49878037b99158f8c, type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 322a7abacf44f654cb240add6cb8c467, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 762318cfeb03f7a4898d9ec28c1cf3ed, type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: e1da588cfb9d91c4f8a6c8f539169fe4, type: 2}
+    com.unity.xr.magicleap.magic_leap_settings: {fileID: 11400000, guid: 286f713bcdcaec248abb72be8449e483, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 9b6975cb5b5430444940f2c037a54d15, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 1ad9d9e73c5b2664daacb51d6e6c0954, type: 2}

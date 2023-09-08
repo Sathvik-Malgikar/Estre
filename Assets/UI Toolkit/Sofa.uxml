@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Main" style="flex-grow: 1; background-color: rgb(255, 251, 251); flex-direction: column;">
+        <ui:VisualElement name="VisualElement" style="flex-grow: 1; height: 246px; width: 100%; flex-shrink: 1; background-color: rgba(255, 255, 181, 0.89); justify-content: center; align-items: stretch; align-self: center;">
+            <ui:VisualElement style="flex-grow: 1; background-image: url(&apos;project://database/Assets/logo.png?fileID=2800000&amp;guid=03a9271d2320de542959bb47fc3202f0&amp;type=3#logo&apos;); max-width: 460px; max-height: 200px; align-self: center; width: 508px; height: 164px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Body" style="flex-grow: 40; height: auto; width: 100%;">
+            <ui:ScrollView name="scrollRect" vertical-scroller-visibility="Hidden" horizontal-scroller-visibility="Hidden" style="height: 2335px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

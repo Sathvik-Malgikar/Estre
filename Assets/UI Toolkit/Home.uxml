@@ -1,0 +1,36 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; height: 401px; background-color: rgb(255, 255, 255); -unity-background-scale-mode: stretch-to-fill; justify-content: flex-end; align-items: stretch; align-self: stretch;">
+        <ui:VisualElement name="Header" style="flex-grow: 1; background-color: rgb(255, 254, 198); height: -237px; flex-shrink: 1;">
+            <ui:VisualElement style="flex-grow: 1; background-image: url(&apos;project://database/Assets/logo.png?fileID=2800000&amp;guid=03a9271d2320de542959bb47fc3202f0&amp;type=3#logo&apos;); -unity-background-scale-mode: scale-to-fit; height: -134px; width: 444px; align-self: center;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="VisualElement" focusable="true" style="flex-grow: 2; height: auto; background-image: url(&apos;project://database/Assets/UI%20Toolkit/homeBanner.jpg?fileID=21300000&amp;guid=874dbeeea8c5f53479aaefff0856d192&amp;type=3#homeBanner&apos;); -unity-background-scale-mode: scale-and-crop; align-items: center; justify-content: center; flex-shrink: 1; width: 100%; align-self: flex-start; flex-direction: column-reverse; flex-wrap: wrap; scale: 1 1;">
+            <ui:Label tabindex="-1" text="Buy directly from factory." parse-escape-sequences="true" display-tooltip-when-elided="true" style="position: absolute; color: rgb(255, 255, 255); font-size: 40px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="cat3" style="flex-grow: 6; width: 100%;">
+            <ui:Label tabindex="-1" text="Shop by categories" parse-escape-sequences="true" display-tooltip-when-elided="true" style="height: 154px; font-size: 40%; -unity-text-align: middle-center; text-shadow: 10px 10px 3.8px rgba(0, 0, 0, 0.24);" />
+            <ui:ScrollView name="HorizScroll" mode="Horizontal" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden" style="height: auto; width: 100%;" />
+            <ui:GroupBox name="dataBox" style="height: 356px; flex-direction: row;">
+                <ui:GroupBox name="Bed_Cot" style="margin-right: 10px; padding-bottom: 2px; padding-right: 4px; padding-left: 4px; width: 300px; padding-top: 2px; margin-left: 10px; margin-bottom: 3px; margin-top: 3px;">
+                    <ui:VisualElement style="flex-grow: 1; background-image: url(&apos;project://database/Assets/Categories/Bed_Cot.jpg?fileID=2800000&amp;guid=c76e83a43aabf304894f3c36b5fdc852&amp;type=3#Bed_Cot&apos;); -unity-background-scale-mode: scale-to-fit; width: 271px; height: 306px;" />
+                    <ui:Label tabindex="-1" text="Bed cot" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; font-size: 26px; width: 262px;" />
+                </ui:GroupBox>
+                <ui:GroupBox name="Recliner" style="margin-right: 5px; padding-bottom: 14px; padding-right: 2px; padding-left: 17px; width: 300px;">
+                    <ui:VisualElement style="flex-grow: 1; background-image: url(&apos;project://database/Assets/Categories/Recliner.jpeg?fileID=2800000&amp;guid=c033feae8690fcb4fbce60219cc6c607&amp;type=3#Recliner&apos;); -unity-background-scale-mode: scale-to-fit; width: 271px; height: 306px; margin-right: 14px; margin-left: 20px;" />
+                    <ui:Label tabindex="-1" text="Recliner" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; font-size: 26px; width: 283px;" />
+                </ui:GroupBox>
+                <ui:GroupBox name="Dining_Table" style="margin-right: 5px; padding-bottom: 14px; padding-right: 2px; padding-left: 17px; width: 300px;">
+                    <ui:VisualElement style="flex-grow: 1; background-image: url(&apos;project://database/Assets/Categories/Dining_table.jpg?fileID=2800000&amp;guid=c69779a5818e016458e86c3bf215e2b9&amp;type=3#Dining_table&apos;); -unity-background-scale-mode: scale-to-fit; width: 271px; height: 306px; margin-right: 14px; margin-left: 48px;" />
+                    <ui:Label tabindex="-1" text="Dining Table" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; font-size: 26px; width: 316px;" />
+                </ui:GroupBox>
+                <ui:GroupBox name="Sofa" style="margin-right: 5px; padding-bottom: 14px; padding-right: 2px; padding-left: 17px; width: 300px;">
+                    <ui:VisualElement style="flex-grow: 1; background-image: url(&apos;project://database/Assets/Categories/Sofa.jpg?fileID=2800000&amp;guid=0f914444f49ef184f9ae6a84999bc1f7&amp;type=3#Sofa&apos;); -unity-background-scale-mode: scale-to-fit; width: 271px; height: 306px; margin-right: 14px; margin-left: 48px;" />
+                    <ui:Label tabindex="-1" text="Sofa" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; font-size: 26px; width: 316px;" />
+                </ui:GroupBox>
+                <ui:GroupBox name="Sofa_bed" style="margin-right: 5px; padding-bottom: 2px; padding-right: 4px; padding-left: 4px; width: 300px; padding-top: 2px; -unity-background-scale-mode: stretch-to-fill;">
+                    <ui:VisualElement style="flex-grow: 1; background-image: url(&apos;project://database/Assets/Categories/Sofa_bed.jpg?fileID=2800000&amp;guid=f195bb19115feec4b8d2c5e6c489b44e&amp;type=3#Sofa_bed&apos;); -unity-background-scale-mode: scale-to-fit; width: 271px; height: 306px; margin-right: 14px; margin-left: 48px;" />
+                    <ui:Label tabindex="-1" text="Sofa bed" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; font-size: 26px; width: 316px;" />
+                </ui:GroupBox>
+            </ui:GroupBox>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

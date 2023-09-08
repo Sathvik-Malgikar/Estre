@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement style="flex-grow: 1; background-color: rgb(255, 254, 198);">
+        <ui:VisualElement style="flex-grow: 1; background-image: url(&apos;project://database/Assets/logo.png?fileID=2800000&amp;guid=03a9271d2320de542959bb47fc3202f0&amp;type=3#logo&apos;); -unity-background-scale-mode: scale-to-fit; height: -134px; width: 444px; align-self: center;" />
+    </ui:VisualElement>
+</ui:UXML>

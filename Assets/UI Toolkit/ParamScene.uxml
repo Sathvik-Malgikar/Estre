@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="Header" src="project://database/Assets/Header.uxml?fileID=9197481963319205126&amp;guid=64dfac3835c25824480b7032bbfc1ec9&amp;type=3#Header" />
+    <ui:Instance template="Header" name="Header" style="height: 272px;" />
+    <ui:VisualElement name="Main" style="flex-grow: 2; background-color: rgb(255, 255, 255);">
+        <ui:GroupBox name="Body" style="height: 1986px;">
+            <ui:GroupBox name="ButtonGroup" style="height: 982px; flex-direction: column; align-items: center; justify-content: space-around;" />
+            <ui:VisualElement name="VisualElement" style="flex-grow: 1; flex-direction: row-reverse; height: auto; width: 100%; justify-content: center;">
+                <ui:Button text="Go to In-house view!" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Launch" style="height: 16%; font-size: 54px; width: 60%; padding-right: 154px; border-top-left-radius: 55px; border-top-right-radius: 55px; border-bottom-right-radius: 55px; border-bottom-left-radius: 55px; background-color: rgb(146, 68, 49); color: rgb(255, 255, 255); margin-top: 20px; margin-right: 265px; justify-content: flex-start; align-items: stretch; -unity-text-align: middle-right;" />
+                <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-image: url(&apos;project://database/Assets/augmented_reality_icon_136923.png?fileID=2800000&amp;guid=7265bf57fb6310a40bab878241e14c0d&amp;type=3#augmented_reality_icon_136923&apos;); -unity-background-scale-mode: stretch-to-fill; height: 100px; position: absolute; width: 100px; left: 0; right: 223px; top: 44px; scale: 1.5 1.5;" />
+            </ui:VisualElement>
+        </ui:GroupBox>
+    </ui:VisualElement>
+</ui:UXML>

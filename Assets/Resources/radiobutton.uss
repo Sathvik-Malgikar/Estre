@@ -1,0 +1,25 @@
+#RadioButtonGroup > VisualElement > * {
+    margin-left: 11px;
+    flex-direction: row;
+    opacity: 1;
+    -unity-font-style: normal;
+    color: rgb(0, 0, 0);
+    justify-content: center;
+}
+
+#RadioButtonGroup > VisualElement > * > RadioButton > VisualElement > Label {
+    margin-left: 14px;
+    align-self: auto;
+    justify-content: flex-start;
+    align-items: auto;
+    flex-direction: row;
+}
+
+#RadioButtonGroup > VisualElement > * > RadioButton > VisualElement > Label:hover {
+    margin-left: 14px;
+    align-self: auto;
+    justify-content: flex-start;
+    align-items: auto;
+    flex-direction: row;
+    color: rgb(187, 195, 80);
+}
