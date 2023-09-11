@@ -8,6 +8,7 @@ TagManager:
   - CLRBTN
   - BaseBTN
   - ARPlane
+  - Obstruction
   layers:
   - Default
   - TransparentFX

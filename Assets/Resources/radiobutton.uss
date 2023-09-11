@@ -1,5 +1,5 @@
 #RadioButtonGroup > VisualElement > * {
-    margin-left: 11px;
+    margin-left: 4%;
     flex-direction: row;
     opacity: 1;
     -unity-font-style: normal;
@@ -8,7 +8,7 @@
 }
 
 #RadioButtonGroup > VisualElement > * > RadioButton > VisualElement > VisualElement {
-    margin-left: 77px;
+    margin-left: 10%;
     align-self: auto;
     justify-content: flex-start;
     align-items: auto;
@@ -20,10 +20,8 @@
 RadioButton:checked Label {
     color: rgb(187, 195, 80);
     font-weight: bold;
-    margin-left : 30px;
-}
-RadioButton Label {
-    color: rgb(255, 255, 255);
-    font-weight: normal ;
-    margin-left : 30px;
+    margin-left: 0;
+    -unity-text-align: upper-left;
+    white-space: nowrap;
+    text-overflow: clip;
 }

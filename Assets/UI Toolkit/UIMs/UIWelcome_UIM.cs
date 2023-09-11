@@ -95,7 +95,7 @@ public class UIIni : MonoBehaviour
             grp.RegisterCallback<ClickEvent>(delegate (ClickEvent e)
             {
 
-                Debug.Log("clicked sofa  " + grp.name);
+                //Debug.Log("clicked sofa  " + grp.name);
                 loadARScene.modelName = grp.name;
                 setVisTree("ParamPage");
 

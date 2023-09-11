@@ -13,12 +13,14 @@ public class AddObstruction : MonoBehaviour
     private ARPlaneManager ARP = null;
     private List<ARRaycastHit> hits = new List<ARRaycastHit>();
     public GameObject obstructions;
+    //public GameObject obstructionPrefab;
 
     // Start is called before the first frame update
     void Start()
     {
         ARM = GetComponent<ARRaycastManager>();
         ARP = GetComponent<ARPlaneManager>();
+
         if (ARM == null)
         {
             Debug.LogWarning("ARM is null");
@@ -28,6 +30,7 @@ public class AddObstruction : MonoBehaviour
             Debug.LogWarning("ARP is null");
 
         }
+        et.Touch.onFingerDown += fingHandler;
     }
 
     private void fingHandler(et.Finger fing)
@@ -35,40 +38,29 @@ public class AddObstruction : MonoBehaviour
         if (fing.index != 0)
         {
             // Debug LogError()
-            Debug.Log("skipped finger due to multiple touch :" + fing.index);
+            //Debug.Log("skipped finger due to multiple touch :" + fing.index);
             return;
         }
         Vector3 normalisedTouch = new Vector3(fing.currentTouch.screenPosition.x / Screen.width, fing.currentTouch.screenPosition.y / Screen.height, 0);
 
         if (ARM.Raycast(fing.currentTouch.screenPosition, hits, tr.PlaneWithinPolygon))
         {
-            Debug.Log("registering plane as object");
+
             //Pose pose = hits[0].pose;
 
             GameObject temp = ARP.GetPlane(hits[0].trackableId).GameObject();
             temp.transform.SetParent(obstructions.transform, true);
             
+            Debug.Log("registered plane as object,current : "+obstructions.transform.childCount);
 
         }
+     
         }
+ 
 
-    void OnEnable()
+    public void Cleanup()
     {
-
-        Debug.Log("TOUCH ENABLED FROM PHASE 1");
-
-        et.TouchSimulation.Enable();
-        et.EnhancedTouchSupport.Enable();
-        et.Touch.onFingerDown += fingHandler;
-
-    }
-
-    void OnDisable()
-    {
-
-        Debug.Log("TOUCH DISABLED FROM PHASE 1");
-        et.TouchSimulation.Disable();
-        et.EnhancedTouchSupport.Disable();
+         
         et.Touch.onFingerDown -= fingHandler;
 
     }

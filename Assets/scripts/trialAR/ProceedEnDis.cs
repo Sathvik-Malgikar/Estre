@@ -7,12 +7,12 @@ using UnityEngine.UI;
 
 public class ProceedEnDis : MonoBehaviour
 {
-    private PlaceSeat plst;
+    //private PlaceSeat plst;
 
     // Start is called before the first frame update
     void Start()
     {
-        plst = FindObjectOfType<PlaceSeat>();
+        //plst = FindObjectOfType<PlaceSeat>();
     }
 
     public void goToFineTune()
@@ -23,7 +23,7 @@ public class ProceedEnDis : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(plst.gotemp != null) {
+        if(PlaceSeat.gotemp != null) {
             gameObject.GetComponent<Button>().interactable = true;
         }
         else

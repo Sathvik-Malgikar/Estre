@@ -11,7 +11,7 @@ public class wallCollisionCheck : MonoBehaviour
 
     public void setghost(Material val)
     {
-        Debug.Log("setghost called!"+val.name,this);
+        //Debug.Log("setghost called!"+val.name,this);
         ghost = val; 
     }
 
@@ -19,13 +19,13 @@ public class wallCollisionCheck : MonoBehaviour
     public void repaint()
     {
       
-        Debug.Log("repaint called " + invalidPos + ghost.name + ColourST.currentMat, this);
+        //Debug.Log("repaint called " + invalidPos + ghost.name + ColourST.currentMat, this);
             MeshRenderer mr = gameObject.GetComponent<MeshRenderer>();
             int n = mr.materials.Length;
             Material[] mtrs = new Material[n];
         if (!invalidPos)
         {
-            Debug.Log("painting colour " + ColourST.currentColor,this);
+            //Debug.Log("painting colour " + ColourST.currentColor,this);
             for (int i = 0; i < n; i++)
             {
                 mtrs[i] = ColourST.currentMat;
@@ -35,7 +35,7 @@ public class wallCollisionCheck : MonoBehaviour
         else
         {
            
-            Debug.Log("painting colour ghost " ,this);
+            //Debug.Log("painting colour ghost " ,this);
             for (int i = 0; i < n; i++)
             {
                 mtrs[i] = ghost;
@@ -58,9 +58,9 @@ public class wallCollisionCheck : MonoBehaviour
     { 
         Debug.Log ("trig enter within furniture");
          
-        if (collision.gameObject.CompareTag("ARPlane"))
+        if (collision.gameObject.CompareTag("Obstruction"))
         {
-            Debug.Log("collision with wall or floor" );
+            Debug.Log("collision with Obstruction");
             invalidPos = true;
             repaint();
             Debug.Log(collision.gameObject.transform.position );
@@ -69,7 +69,7 @@ public class wallCollisionCheck : MonoBehaviour
         else
         {
 
-            Debug.Log("collision with non ARPlane" );
+            Debug.Log("collision with ARPlane or something else");
          
         }
     }
@@ -78,9 +78,9 @@ public class wallCollisionCheck : MonoBehaviour
     {
        
         
-        if (collision.gameObject.CompareTag("ARPlane"))
+        if (collision.gameObject.CompareTag("Obstruction"))
         {
-            Debug.Log("collision exit with wall or floor" );
+            Debug.Log("collision exit with Obstruction");
             invalidPos = false;
             repaint();
             Debug.Log(collision.gameObject.transform.position );

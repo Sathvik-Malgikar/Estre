@@ -11,6 +11,7 @@ public class ESCBackDetect : MonoBehaviour
             Debug.Log("Android back button pressed!");
             //paramSession.stuffing="";
             //paramSession.seats="";
+            Debug.LogWarning("faulty back navigation using escape/back arrow alert!");
             //paramSession.group="g1";
             loadARScene.goBack();
             

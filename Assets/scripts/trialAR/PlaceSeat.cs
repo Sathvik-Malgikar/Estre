@@ -21,18 +21,17 @@ public class PlaceSeat : MonoBehaviour
     public Rect spawnArea;
 
 
-    void Awake()
+    void Start()
     {
         spawnArea = new Rect(0f, 0.2f, 1f, 0.48f);
 
-        Debug.Log("INSIDE AWAKE RES LOADED!"+ "models/" + loadARScene.modelName + "/prefabs/" + paramSession.seats);
+        //Debug.Log("INSIDE AWAKE RES LOADED!"+ "models/" + loadARScene.modelName + "/prefabs/" + paramSession.seats);
 
         loadedPrefab = Resources.Load<GameObject>("models/"+loadARScene.modelName+"/prefabs/"+ paramSession.seats);//paramPage.seats
 
         if (loadedPrefab==null)
         Debug.LogError("prefab NULL"+"tried to load "+"models/"+loadARScene.modelName+"/prefabs/"+ paramSession.seats);
-        else
-        Debug.Log("loaded prefab from disk :"+loadedPrefab.name);
+         
 
         // Debug.Log("Chosen model: " + loadARScene.modelName);
         // if (loadARScene.modelName == "ModelOne")
@@ -55,27 +54,16 @@ public class PlaceSeat : MonoBehaviour
         {
             Debug.LogWarning("ARP is null");
         }
-
-    }
-    void OnEnable()
-    {
-
-        Debug.Log("TOUCH ENABLED FROM PHASE 2");
-
-        et.TouchSimulation.Enable();
-        et.EnhancedTouchSupport.Enable();
         et.Touch.onFingerDown += fingHandler;
 
+
     }
 
-  
 
-    void OnDisable()
+    public void Cleanup()
     {
 
-        Debug.Log("TOUCH DISABLED FROM PHASE 2");
-        et.TouchSimulation.Disable();
-        et.EnhancedTouchSupport.Disable();
+     
         et.Touch.onFingerDown -= fingHandler;
 
     }
@@ -89,7 +77,7 @@ public class PlaceSeat : MonoBehaviour
         if (fing.index != 0)
         {
             // Debug LogError()
-            Debug.Log("skipped finger due to multiple touch :" + fing.index);
+            //Debug.Log("skipped finger due to multiple touch :" + fing.index);
             return;
         }
 

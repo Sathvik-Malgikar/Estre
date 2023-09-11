@@ -3,6 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
+using et = UnityEngine.InputSystem.EnhancedTouch;
+
 
 public class trialAR_UIM : MonoBehaviour
 {
@@ -10,12 +14,41 @@ public class trialAR_UIM : MonoBehaviour
     public VisualTreeAsset obstructionTree;
     public VisualTreeAsset placementTree;
     public UIDocument uid;
+    
+    public GameObject planePrefab;
+    public GameObject OriginRef;
+    public GameObject obstructionPrefab;
+    private ARPlaneManager arp ;
 
     // Start is called before the first frame update
     void Start()
     {
         setVisTree("Obs");
-        
+        //FindAnyObjectByType<ARPlaneManager>().planePrefab = obstructionPrefab;
+
+    }
+    void Awake()
+    {
+
+
+        et.TouchSimulation.Enable();
+        et.EnhancedTouchSupport.Enable();
+        Debug.Log("TOUCH ENABLED FROM TRIALAR");
+        //et.Touch.onFingerDown += fingHandler;
+
+    }
+
+
+
+    void OnDisable()
+    {
+
+        et.TouchSimulation.Disable();
+        et.EnhancedTouchSupport.Disable();
+        Debug.Log("TOUCH DISABLED FROM TRIALAR");
+        //et.Touch.onFingerDown -= fingHandler;
+
+
     }
     public void setVisTree(String name)
     {
@@ -37,6 +70,15 @@ public class trialAR_UIM : MonoBehaviour
     }
     public void initPlacementTree( )
     {
+
+        OriginRef.GetComponent<ARPlaneManager>().planePrefab = planePrefab;
+        OriginRef.GetComponent<ARPlaneManager>().requestedDetectionMode = PlaneDetectionMode.Horizontal;
+    
+        OriginRef.GetComponent<AddObstruction>().enabled = false;
+        OriginRef.GetComponent<AddObstruction>().Cleanup();
+        OriginRef.GetComponent<PlaceSeat>().enabled = true;
+        
+
         uid.rootVisualElement.Q<VisualElement>("Float").RegisterCallback<ClickEvent>(delegate (ClickEvent eve)
         {
             setVisTree("CONFIRM");
@@ -57,7 +99,7 @@ public class trialAR_UIM : MonoBehaviour
           
 
         });
-        uid.rootVisualElement.Q<Label>("ModelName").text = loadARScene.modelName;
+        uid.rootVisualElement.Q<Label>("ModelName").text = "Model Name :"+loadARScene.modelName+" "+paramSession.seats;
 
         RadioButtonGroup rbg = uid.rootVisualElement.Q<RadioButtonGroup>();
 
@@ -78,8 +120,17 @@ public class trialAR_UIM : MonoBehaviour
 
         
 
-    } public void initObstructionTree( )
+    }
+    
+    public void initObstructionTree( )
     {
+        OriginRef.GetComponent<ARPlaneManager>().requestedDetectionMode = PlaneDetectionMode.Vertical;
+        OriginRef.GetComponent<ARPlaneManager>().planePrefab = obstructionPrefab;
+        OriginRef.GetComponent<AddObstruction>().enabled = true;
+        OriginRef.GetComponent<PlaceSeat>().enabled = false;
+        OriginRef.GetComponent<PlaceSeat>().Cleanup();
+
+
         uid.rootVisualElement.Q<VisualElement>("Float").RegisterCallback<ClickEvent>(delegate (ClickEvent eve)
         {
             setVisTree("Placement");
