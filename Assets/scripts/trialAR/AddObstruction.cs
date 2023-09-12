@@ -13,6 +13,7 @@ public class AddObstruction : MonoBehaviour
     private ARPlaneManager ARP = null;
     private List<ARRaycastHit> hits = new List<ARRaycastHit>();
     public GameObject obstructions;
+    public Material solidObstruction;
     //public GameObject obstructionPrefab;
 
     // Start is called before the first frame update
@@ -49,6 +50,10 @@ public class AddObstruction : MonoBehaviour
             //Pose pose = hits[0].pose;
 
             GameObject temp = ARP.GetPlane(hits[0].trackableId).GameObject();
+            temp.tag = "Obstruction";
+            //temp.GetComponent<ARPlane>().enabled = false;
+            //temp.GetComponent<ARPlaneMeshVisualizer>().enabled = false;
+            temp.GetComponent<MeshRenderer>().material = solidObstruction;
             temp.transform.SetParent(obstructions.transform, true);
             
             Debug.Log("registered plane as object,current : "+obstructions.transform.childCount);

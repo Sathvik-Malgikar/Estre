@@ -58,34 +58,33 @@ public class wallCollisionCheck : MonoBehaviour
     { 
         Debug.Log ("trig enter within furniture");
          
-        if (collision.gameObject.CompareTag("Obstruction"))
+         
+        if (collision.gameObject.tag == "Obstruction")
         {
             Debug.Log("collision with Obstruction");
             invalidPos = true;
             repaint();
-            Debug.Log(collision.gameObject.transform.position );
-           
-        }
-        else
-        {
+            Debug.Log(collision.gameObject.transform.position);
 
-            Debug.Log("collision with ARPlane or something else");
-         
         }
+
+
     }
 
     private void OnTriggerExit(Collider collision)
     {
-       
-        
-        if (collision.gameObject.CompareTag("Obstruction"))
+
+        if (collision.gameObject.tag == "Obstruction")
         {
             Debug.Log("collision exit with Obstruction");
             invalidPos = false;
             repaint();
-            Debug.Log(collision.gameObject.transform.position );
-           
+            Debug.Log(collision.gameObject.transform.position);
+
         }
-        
+
+
+
+
     }
 }
